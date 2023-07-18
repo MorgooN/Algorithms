@@ -1,4 +1,6 @@
 // Another name for the Recursive Search is DFS
+// Time complexity O(N) where N - number of nodes
+// REVERSE
 
 // class for saving/creating nodes
 class Node{

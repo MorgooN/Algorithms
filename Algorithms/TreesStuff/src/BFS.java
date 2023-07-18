@@ -1,4 +1,5 @@
 // O(N) complexity
+// Question can be summarized as "Find connected components in graph"
 
 
 public class BFS {

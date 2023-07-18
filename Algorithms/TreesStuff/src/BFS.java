@@ -1,4 +1,4 @@
-// O(N) complexity 
+// O(N) complexity
 
 
 public class BFS {
@@ -22,7 +22,7 @@ public class BFS {
             return;
         }
         callBFS(grid, i+1, j);  // checking rows (upper)
-        callBFS(grid, i-1, j);  // lover
+        callBFS(grid, i-1, j);  // lower
         callBFS(grid, i, j+1);  // checking columns (left)
         callBFS(grid, i, j-1);  // right
 

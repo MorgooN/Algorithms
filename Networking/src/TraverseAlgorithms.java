@@ -1,9 +1,10 @@
 import java.util.*;
+// Here covered the net(graph) creation
+// and traversal algorithms
 
 // class where we create and set nodes.
 // ArrayList is chosen instead of LinkedList
 // because of his O(1) adding and getting element complexity
-
 class Nodes{
     int value;
     List<Nodes> neighbors;
@@ -18,7 +19,7 @@ class Nodes{
     }
 }
 
-public class DepthFirstTraverse {
+public class TraverseAlgorithms {
 
     public static void main(String args[]){
 
@@ -46,7 +47,6 @@ public class DepthFirstTraverse {
     // the Set is used here to keep track of all
     // visited nodes, since graph may contain cycles,
     // and we only want to add unvisited nodes into the queue
-
     static void bfs(Nodes startNode){
             //If you declare a Queue (left-hand, interface) and instantiate it with a LinkedList (right-hand, class),
             // you'll only have the Queue operations, not the List methods.
@@ -89,7 +89,16 @@ public class DepthFirstTraverse {
                 }
             }
         }
-
     }
 
+    static void dfsRecursive(Nodes startNode, Set<Integer> visitors){
+        System.out.println(startNode.value);
+        visitors.add(startNode.value);
+
+        for(Nodes n: startNode.neighbors){
+            if(!visitors.contains(n.value)){
+                dfsRecursive(n, visitors);
+            }
+        }
+    }
 }

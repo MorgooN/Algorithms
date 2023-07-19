@@ -35,7 +35,7 @@ public class Minimax {
     }
 
     public static void main(String args[]){
-        int scores[] = {3, 5, 2, 9, 12, 5, 23, 23};
+        int scores[] = {3, 5, 2, 9, 12, 5, 23, 23}; // number of scores must be the power of 2
         int n =   scores.length;
         int h = log2(n);
         int res = miniMax(0,0,true,scores,h);

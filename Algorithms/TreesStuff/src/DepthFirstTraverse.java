@@ -33,7 +33,7 @@ public class DepthFirstTraverse {
         bfs(n0);
 
         System.out.println(" DFS-Iterative style ");
-        dfs(0+"\n");
+        dfsIterative(n0);
 
 
     }
@@ -66,6 +66,30 @@ public class DepthFirstTraverse {
                     }
                 }
             }
+    }
+
+    // DFS uses a stack instead of queue to traverse the graph. A start node is pushed to the stack.
+    // As long as the stack is not empty, a node is popped, and its unvisited neighbors are added to the stack
+    // The graph is traversed in-depth because the node that is popped off the stack is the most recently pushed.
+    // Just like in BFS, a visited set is used
+    static void dfsIterative(Nodes startNode){
+        Stack<Nodes> s = new Stack<>();
+        Set<Integer> visitors = new HashSet<>();
+        s.push(startNode);
+        visitors.add(startNode.value);
+
+        while(!s.isEmpty()){
+            Nodes currNode = s.pop();
+            System.out.println(currNode.value);
+
+            for(Nodes n: currNode.neighbors){
+                if(!visitors.contains(n.value)){
+                    s.push(n);
+                    visitors.add(n.value);
+                }
+            }
+        }
 
     }
+
 }

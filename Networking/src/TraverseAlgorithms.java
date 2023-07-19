@@ -30,11 +30,29 @@ public class TraverseAlgorithms {
         Nodes n4 = new Nodes(4);
         Nodes n5 = new Nodes(5);
 
+        n0.addEdge(n1);
+        n1.addEdge(n0);
+        n1.addEdge(n3);
+        n1.addEdge(n2);
+        n2.addEdge(n1);
+        n2.addEdge(n4);
+        n3.addEdge(n1);
+        n3.addEdge(n4);
+        n3.addEdge(n5);
+        n4.addEdge(n2);
+        n4.addEdge(n3);
+        n5.addEdge(n3);
+
+
+
         System.out.println("BFS-Iterative style ");
         bfs(n0);
 
         System.out.println(" DFS-Iterative style ");
         dfsIterative(n0);
+
+        System.out.println(" DFS-Iterative style ");
+        dfsRecursive(n0, new HashSet<Integer>());
 
 
     }

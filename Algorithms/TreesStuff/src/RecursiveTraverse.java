@@ -14,7 +14,7 @@ class Node{
     }
 }
 
-public class RecursiveSearch {
+public class RecursiveTraverse {
 
     // recursive function to traverse tree
     static void postOrder(Node root){

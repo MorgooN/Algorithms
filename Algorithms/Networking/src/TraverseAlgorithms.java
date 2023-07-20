@@ -78,8 +78,8 @@ public class TraverseAlgorithms {
                 System.out.println(currentNode.value);
 
                 for(Nodes n: currentNode.neighbors){    // dealing with the neighbors
-                    if(!visited.contains(n.value)){
-                        q1.add(n);
+                    if(!visited.contains(n.value)){     // graph may contain loops, and we want only unique values
+                        q1.add(n);                      // so we checking for a uniqness and if true adding the value 
                         visited.add(n.value);
                     }
                 }
@@ -100,8 +100,9 @@ public class TraverseAlgorithms {
             Nodes currNode = s.pop();
             System.out.println(currNode.value);
 
+            
             for(Nodes n: currNode.neighbors){
-                if(!visitors.contains(n.value)){
+                if(!visitors.contains(n.value)){ // As in BFS graph may contain loops, and we want only unique values
                     s.push(n);
                     visitors.add(n.value);
                 }
@@ -114,7 +115,7 @@ public class TraverseAlgorithms {
         visitors.add(startNode.value);
 
         for(Nodes n: startNode.neighbors){
-            if(!visitors.contains(n.value)){
+            if(!visitors.contains(n.value)){   // Same as iterative DFS graph may contain loops, and we want only unique values
                 dfsRecursive(n, visitors);
             }
         }

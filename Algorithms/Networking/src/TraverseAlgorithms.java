@@ -79,7 +79,7 @@ public class TraverseAlgorithms {
 
                 for(Nodes n: currentNode.neighbors){    // dealing with the neighbors
                     if(!visited.contains(n.value)){     // graph may contain loops, and we want only unique values
-                        q1.add(n);                      // so we checking for a uniqness and if true adding the value 
+                        q1.add(n);                      // so we're checking for a uniqueness and if true adding the value
                         visited.add(n.value);
                     }
                 }
@@ -92,7 +92,7 @@ public class TraverseAlgorithms {
     // Just like in BFS, a visited set is used
     static void dfsIterative(Nodes startNode){
         Stack<Nodes> s = new Stack<>();
-        Set<Integer> visitors = new HashSet<>();
+        Set<Integer> visitors = new HashSet<>();     // Using HashSet for constant time performance for basic operations
         s.push(startNode);
         visitors.add(startNode.value);
 
@@ -120,4 +120,13 @@ public class TraverseAlgorithms {
             }
         }
     }
+
+    static void topologicalSearch(int v, Stack<Integer> s1, boolean[] visited){
+       visited[v] = true;
+       Integer i;
+
+
+    }
 }
+
+

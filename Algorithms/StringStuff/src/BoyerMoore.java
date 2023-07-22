@@ -1,5 +1,5 @@
 import java.util.HashMap;
-
+// O (n+m) complexity where n - patter length, m - source text length
 public class BoyerMoore {
     static int NO_OF_CHARS = 256;
 

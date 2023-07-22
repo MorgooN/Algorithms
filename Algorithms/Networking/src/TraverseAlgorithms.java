@@ -120,13 +120,7 @@ public class TraverseAlgorithms {
             }
         }
     }
-
-    static void topologicalSearch(int v, Stack<Integer> s1, boolean[] visited){
-       visited[v] = true;
-       Integer i;
-
-
-    }
+    
 }
 
 

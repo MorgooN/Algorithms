@@ -15,7 +15,7 @@ public class ProperNesting{
         if(count < 0){
             System.out.println(" String is not properly nested ");
         }
-        if (count >= 0){
+        if (count == 0){
             System.out.println(" String is properly nested ");
         }
     }

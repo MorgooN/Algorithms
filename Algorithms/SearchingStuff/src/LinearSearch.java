@@ -25,6 +25,5 @@ public class LinearSearch {
         else{
             System.out.println("Element found on the " + index + " position ");
         }
-
     }
 }

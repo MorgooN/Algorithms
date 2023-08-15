@@ -24,8 +24,9 @@ public class RecursiveTraverse {
             return;
         }
 
-        postOrder(root.left); // travers left
-        postOrder(root.right); // travers right
+      
+        postOrder(root.right); // Traverse right
+        postOrder(root.left); // Traverse left
 
 
 

@@ -25,7 +25,7 @@ public class VigenereCipher {
 	 * generated with the use of the key
 	*/
 	static String cipherText(String str, String key) {
-		String cipher_txt = " ";
+		String cipher_txt = "";
 		
 		for(int i = 0; i < str.length();++i) {
 			
@@ -44,7 +44,7 @@ public class VigenereCipher {
 	 */
 	static String origText(String cipher_txt, 
 			String key) {
-		String origTxt = " ";
+		String origTxt = "";
 		
 		for(int i = 0; i < cipher_txt.length() && i < key.length(); ++i) {
 			int x = (cipher_txt.charAt(i) - 

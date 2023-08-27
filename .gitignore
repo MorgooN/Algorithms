@@ -22,4 +22,11 @@ out/
 *.iws
 *.xml
 
+##############################
+## Eclipse
+##############################
+.classpath
+.project
+.settings
+
 /.metadata/
